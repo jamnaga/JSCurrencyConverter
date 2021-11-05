@@ -1,0 +1,16 @@
+.padding {
+    padding: 30px;
+}
+
+#result {
+    display: none;
+}
+
+.curr {
+    margin-right: 8px;
+}
+
+.dropdown-menu {
+    max-height: 280px;
+    overflow-y: auto;
+}
