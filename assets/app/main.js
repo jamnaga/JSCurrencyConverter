@@ -46,19 +46,55 @@ var doConversion = () => {
 $(() => {
     fetchCurrencies();
 
-    $("body").on('keypress', '#search', (e) => {
-        if ($("#search").val() == "" || $("#search").val().includes(" ")) {
+    $("body").delegate('#search1', 'keyup', (e) => {
+        console.log("V:" + $("#search1").val());
+
+        if ($("#search1").val() == "" || $("#search1").val().includes(" ")) {
             $(".dropdown-item").show();
-        }
-        $(".dropdown-item").each((element) => {
-           
             
+        } else {
+            $(".dropdown-item").hide();
+            $(".dropdown-item:contains('" + $("#search1").val() + "')").show();
+        }
+        
+        /*$(".dropdown-item").each((element) => {
             if ($(element).text().includes($("#search").val())) {
                 $(element).show();
             } else {
                 $(element).hide();
             }
-        });
+        });*/
+
+        
+    });
+
+    $("body").delegate('#search2', 'keyup', (e) => {
+        console.log("V:" + $("#search2").val());
+
+        if ($("#search2").val() == "" || $("#search2").val().includes(" ")) {
+            $(".dropdown-item").show();
+            
+        } else {
+            $(".dropdown-item").hide();
+            $(".dropdown-item:contains('" + $("#search2").val() + "')").show();
+        }
+        
+        /*$(".dropdown-item").each((element) => {
+            if ($(element).text().includes($("#search").val())) {
+                $(element).show();
+            } else {
+                $(element).hide();
+            }
+        });*/
+
+        
+    });
+
+
+    $(".curr").click(() => {
+        $("#search1").val("");
+        $("#search2").val("");
+        $(".dropdown-item").show();
     });
 
     $("body").on('click', '.dropdown-item', (e) => {
