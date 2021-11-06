@@ -54,7 +54,7 @@ $(() => {
             
         } else {
             $(".dropdown-item").hide();
-            $(".dropdown-item:contains('" + $("#search1").val() + "')").show();
+            $(".dropdown-item:contains('" + $("#search1").val().toUpperCase() + "')").show();
         }
         
         /*$(".dropdown-item").each((element) => {
@@ -69,14 +69,14 @@ $(() => {
     });
 
     $("body").delegate('#search2', 'keyup', (e) => {
-        console.log("V:" + $("#search2").val());
+        console.log("V:" + $("#search2").val().toUpperCase());
 
         if ($("#search2").val() == "" || $("#search2").val().includes(" ")) {
             $(".dropdown-item").show();
             
         } else {
             $(".dropdown-item").hide();
-            $(".dropdown-item:contains('" + $("#search2").val() + "')").show();
+            $(".dropdown-item:contains('" + $("#search2").val().toUpperCase() + "')").show();
         }
         
         /*$(".dropdown-item").each((element) => {
