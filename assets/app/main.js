@@ -9,7 +9,6 @@ var fetchCurrencies = () => {
         success: function (result) {
             //var data = JSON.parse(result);
             window.asd = result;
-            console.log(result);
             var keys = Object.keys(result);
 
 
@@ -47,7 +46,7 @@ $(() => {
     fetchCurrencies();
 
     $("body").delegate('#search1', 'keyup', (e) => {
-        console.log("V:" + $("#search1").val());
+        
 
         if ($("#search1").val() == "" || $("#search1").val().includes(" ")) {
             $(".dropdown-item").show();
@@ -69,7 +68,6 @@ $(() => {
     });
 
     $("body").delegate('#search2', 'keyup', (e) => {
-        console.log("V:" + $("#search2").val().toUpperCase());
 
         if ($("#search2").val() == "" || $("#search2").val().includes(" ")) {
             $(".dropdown-item").show();
@@ -98,7 +96,6 @@ $(() => {
     });
 
     $("body").on('click', '.dropdown-item', (e) => {
-        console.log($(e.target).text());
         $(e.target).parent().parent().find('button').text($(e.target).text());
         if ($(e.target).parent().parent().find('button').attr("id") == "from_curr") {
             window.from_curr = $(e.target).text();
