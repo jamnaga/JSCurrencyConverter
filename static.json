@@ -1,5 +1,7 @@
 {
-    "routes": {
-      "/*.html": "index.html"
-    }
+  "root": "widget",
+  "clean_urls": false,
+  "routes": {
+    "/**": "index.html"
+  }
 }
