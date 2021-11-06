@@ -1,3 +1,5 @@
 {
-    "root": "/widget"
+    "routes": {
+      "/*.html": "index.html"
+    }
 }
