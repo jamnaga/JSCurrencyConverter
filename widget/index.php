@@ -18,7 +18,7 @@
 
 <body <?php 
 if($_GET['color']){
-  echo 'style="background-color: '.$_GET['color'].'"';
+  echo 'style="background-color: #'.$_GET['color'].'"';
 }
 ?>>
   <div id="widget">
