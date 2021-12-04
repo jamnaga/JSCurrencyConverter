@@ -16,7 +16,11 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   </head>
 
-<body>
+<body <?php 
+if($_GET['color']){
+  echo 'style="background-color: '.$_GET['color'].'"';
+}
+?>>
   <div id="widget">
     <div class="d-flex justify-content-center">
       <div class="card" style="margin: 12px;">
